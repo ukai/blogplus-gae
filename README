@@ -1,1 +1,23 @@
 blogplus on Google App Engine/go
+
+- download go appengine sdk (go1beta3)
+  http://code.google.com/p/appengine-go/downloads/list
+- extract zip and set the directory to PATH
+- put go-weekly bin to top of PATH
+  so, PATH=/path/to/go/bin:/path/to/go-appengine/google_appengine:$PATH
+
+- install github.com/ukai/blogplus in src/github.com/ukai/blogplus
+  export GOPATH=$(pwd)
+  cd src
+  go get github.com/ukai/blogplus
+
+- edit
+  - src/app.yaml (<- src/app.yaml.in)
+  - src/gae/config.go (<- src/gae/config.go)
+
+local test
+- dev_appserver.py src
+
+appspot.com
+- register application id and set it in src/app.yaml, src/gae/config.go
+- appcfg.py update src
