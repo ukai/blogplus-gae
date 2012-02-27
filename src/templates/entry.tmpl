@@ -1,0 +1,26 @@
+
+ <div class="post">
+  <div class="content">{{.Object.HTMLContent}}</div>
+  {{if .FormedAttachment }}
+  <div class="attachments">
+   <hr class="attachment">
+   {{.HTMLFormedAttachment}}
+  </div>
+  {{end}}
+  <div class="meta">
+   <span class="date">{{.Published}}</span>
+   <span class="permalink"><a href="{{.Permalink}}">permalink</a></span>
+   <span class="original_post"><a target="_blank" href="{{.Url}}">original post</a></span> |
+    {{if .Object.PlusOners.TotalItems }}
+      <span class="plusones"><a href="{{.Url}}">+{{.Object.PlusOners.TotalItems}}</a></span>
+    {{end}}
+    {{if .Object.Resharers.TotalItems }}
+      <span class="reshares"><a href="{{.Url}}">{{.Object.Resharers.TotalItems}} reshares</a></span>
+    {{end}}
+    {{if .Object.Replies.TotalItems }}
+      <span class="replies"><a href="{{.Url}}">{{.Object.Replies.TotalItems}} replies</a></span>
+    {{end}}
+    <g:plusone size="small" href="{{.Permalink}}"></g:plusone>
+  </div>
+  <hr class="entry" />
+ </div>

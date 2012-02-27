@@ -1,0 +1,26 @@
+application: <your application id>
+version: 1
+runtime: go
+api_version: go1beta
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?.*\.bak$
+- ^(.*/)?.git/.*
+- ^github.com/ukai/blogplus/cmd/.*
+nobuild_files: github.com/ukai/blogplus/cmd/.*
+
+handlers:
+- url: /fetcher
+  script: _go_app
+  login: admin
+
+- url: /.*
+  script: _go_app

@@ -1,0 +1,9 @@
+<h2>Archives</h2>
+<div class="content">
+ <select id="select_archive">
+   <option value=""></option>
+   {{range .ArchiveItems}}
+   <option value="{{.Datespec}}">{{.Datespec}} ({{.Count}})</option>
+   {{end}}
+ </select>
+</div>

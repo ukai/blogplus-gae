@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>{{.Blogplus.Title}}{{.Title}}</title>
+  <link rel="me" type="text/html" href="{{.Blogplus.AuthorUri}}"/>
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="{{.Blogplus.Prefix}}/feed"/>
+  {{template "header" .}}
+  <script type="text/javascript" src="{{.Blogplus.Prefix}}/js/archives.js"></script>
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+ </head>
+ <body>
+  <div id="content">
+   <h1><a itemprop="name" href="{{.Blogplus.Prefix}}/">{{.Blogplus.Title}}</a></h1>
+   <div id="main">
+   {{if .Posts }}
+    {{range .Posts}}{{template "entry" .}}{{end}} 
+   {{else}}
+    {{template "entry" .Post}}
+   {{end}}
+   </div>
+   <div id="sidebar">
+     {{template "sidebar" .}}
+   </div>
+  </div>
+ </body>
+</html>

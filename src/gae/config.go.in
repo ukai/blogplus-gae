@@ -1,0 +1,19 @@
+package gae
+
+const (
+	// google+ user id.
+	// https://plus.google.com/u/0/<userId>/posts
+	userId = "<google+ user id>"
+	// google+ api key
+	key        = "<google+ api key>"
+	title      = "<blogplus title>"
+	authorName = "<author name>"
+	authorUri  = "<author uri>"
+	scheme     = "http"
+	// for dev_appserver.py, use "localhost:8080"
+	// on appspot, use "<appid>.appspot.com"
+	host = "<host:port>"
+
+	staticDir   = "static"
+	templateDir = "templates"
+)

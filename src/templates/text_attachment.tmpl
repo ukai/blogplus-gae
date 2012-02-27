@@ -1,0 +1,14 @@
+{{if .VisualAttachments}}
+<div>
+{{range .VisualAttachments}}
+<a href="{{.Url}}"><img src="{{.Image.Url}}"></a><br>
+{{end}}
+</div>
+{{end}}
+<div>
+{{range .TextAttachments}}
+<div>
+<a href="{{.Url}}">{{.HTMLDisplayName}}</a><br>{{.Content}}
+</div>
+{{end}}
+</div>

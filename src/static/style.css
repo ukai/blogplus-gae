@@ -1,0 +1,66 @@
+
+/* style */
+h1 {
+    font-family: sans-serif;
+}
+
+h1 a {
+    color: 'black';
+    width: 100%;
+}
+
+#sidebar h2 {
+    font-family: serif;
+    font-size: medium;
+    text-decoration:none;
+    border-bottom:solid black 1px;
+}
+
+h1 a:hover {
+    text-decoration:none;
+}
+
+div.post {
+    width: 97%;
+}
+
+hr {
+    border-color:green;
+}
+
+hr.entry {
+    margin-bottom: 7ex;
+}
+
+div.attachments {
+    margin-left:10%;
+}
+
+div.meta {
+    font-family: serif;
+    background-color:#EEE;
+}
+
+#main div.content {
+    word-wrap: break-word;
+}
+
+#sidebar div.content {
+    margin-left: 5px;
+}
+
+#content {
+    margin-left: 4ex;
+}
+
+#main {
+   max-width: 640px;
+   border-right: 1px solid #BBB;
+   float:left;
+   line-height: 1.7em;
+}
+
+#sidebar {
+    max-width: 320px;
+    float:left;
+}
