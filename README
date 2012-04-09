@@ -1,9 +1,9 @@
 blogplus on Google App Engine/go
 
-- download go appengine sdk (go1beta3)
-  http://code.google.com/p/appengine-go/downloads/list
+- download go appengine sdk (go1)
+  https://developers.google.com/appengine/downloads?hl=ja#Google_App_Engine_SDK_for_Go
 - extract zip and set the directory to PATH
-- put go-weekly bin to top of PATH
+- put go1 bin to top of PATH
   so, PATH=/path/to/go/bin:/path/to/go-appengine/google_appengine:$PATH
 
 - install github.com/ukai/blogplus in src/github.com/ukai/blogplus
